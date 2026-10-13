@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dani Firdaus — chemical engineering student exploring environmental solutions.">
+  <title>Dani Firdaus | Portfolio</title>
+  <style>
+    :root {
+      --bg: #081425;
+      --card: #122238;
+      --text: #edf4ff;
+      --muted: #b0bfd3;
+      --accent: #63f5ce;
+      --border: #2a3b52;
+    }
+    body.light {
+      --bg: #f3f6fa;
+      --card: #ffffff;
+      --text: #102238;
+      --muted: #4d6076;
+      --accent: #007963;
+      --border: #d6dfe9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1080px, 90%); margin: auto; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-weight: 800; font-size: 22px; text-decoration: none; }
+    .logo span, .label { color: var(--accent); }
+    nav { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    nav a { text-decoration: none; font-size: 14px; }
+    button {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 9px 12px;
+      cursor: pointer;
+    }
+    .hero { padding: 90px 0 75px; max-width: 850px; }
+    .label { font-size: 12px; letter-spacing: 2px; font-weight: bold; }
+    h1 { font-size: clamp(42px, 7vw, 78px); line-height: 1.08; margin: 20px 0; }
+    h2 { font-size: 30px; line-height: 1.25; }
+    h3 { line-height: 1.4; }
+    p { color: var(--muted); }
+    .hero p { font-size: 19px; max-width: 650px; }
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      background: var(--accent);
+      color: var(--bg);
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    section { padding: 35px 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card);
+    }
+    .number { color: var(--accent); font-size: 14px; font-weight: bold; }
+    .tags { display: flex; gap: 10px; flex-wrap: wrap; }
+    .tags span {
+      border: 1px solid var(--border);
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 14px;
+    }
+    footer {
+      margin-top: 50px;
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 5px;
+    }
+    @media (max-width: 760px) {
+      header { align-items: flex-start; flex-direction: column; }
+      .hero { padding: 60px 0 40px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="#">DANI<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <button id="theme" type="button" aria-pressed="false">Light mode</button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="label">CHEMICAL ENGINEERING · ENVIRONMENT</div>
+        <h1>Hi, I'm<br>Dani Firdaus.</h1>
+        <p>
+          A chemical engineering student at UiTM Penang,
+          exploring how engineering, research and technology
+          can solve environmental problems.
+        </p>
+        <a class="button" href="#projects">Explore my projects ↗</a>
+      </div>
+
+      <section id="about">
+        <div class="label">01 / ABOUT ME</div>
+        <h2>Curious about processes.<br>Focused on practical solutions.</h2>
+        <p>
+          My interests include waste management, process simulation
+          and sustainable materials. I enjoy turning technical ideas
+          into clear explanations and developing solutions through
+          coursework, research and collaborative projects.
+        </p>
+        <div class="tags">
+          <span>Environmental engineering</span>
+          <span>Research</span>
+          <span>Process simulation</span>
+          <span>Sustainability</span>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="label">02 / SELECTED PROJECTS</div>
+        <h2>Ideas I've explored.</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="number">01 — RESEARCH</div>
+            <h3>PFAD Epoxidation</h3>
+            <p>
+              Diploma research investigating oleic acid derived
+              from palm fatty acid distillate using a vanadium
+              oxide catalyst.
+            </p>
+          </article>
+          <article class="card">
+            <div class="number">02 — COURSEWORK</div>
+            <h3>Materials Recovery Facility</h3>
+            <p>
+              A waste management study exploring recyclable
+              separation, material balances and recovery
+              performance.
+            </p>
+          </article>
+          <article class="card">
+            <div class="number">03 — PROJECT CONCEPT</div>
+            <h3>Interactive Plant Learning</h3>
+            <p>
+              A proposed learning platform that uses simulations
+              to help students understand industrial equipment
+              and plant operations.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="label">03 / INDUSTRY EXPERIENCE</div>
+        <h2>Learning beyond the classroom.</h2>
+        <article class="card">
+          <div class="number">FEBRUARY – AUGUST 2025</div>
+          <h3>Operational Excellence Intern · BPE Energy Sdn Bhd</h3>
+          <p>
+            Supported tender and proposal activities, supplier
+            enquiries, quotation comparisons and project
+            documentation in an electrical and instrumentation
+            engineering environment.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Dani Firdaus · Personal portfolio
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("theme").addEventListener("click", function () {
+      const light = document.body.classList.toggle("light");
+      this.textContent = light ? "Dark mode" : "Light mode";
+      this.setAttribute("aria-pressed", String(light));
+    });
+  </script>
+</body>
+</html>
